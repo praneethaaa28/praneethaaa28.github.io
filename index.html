@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | [Your Name]</title>
+    <title>Portfolio | Praneetha Voona</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         /* --- 1. CSS VARIABLES (Color Palette) --- */
         :root {
-            /* Professional Color Scheme */
-            --primary-color: #0f172a;       /* Dark Slate/Navy */
+            /* Professional Slate & Royal Blue Scheme */
+            --primary-color: #0f172a;       /* Dark Slate */
             --secondary-color: #334155;     /* Medium Slate */
-            --accent-color: #2563eb;        /* Royal Blue (Action color) */
-            --accent-hover: #1d4ed8;        /* Darker Blue for hover states */
-            --background-light: #f8fafc;    /* Very light grey/white */
+            --accent-color: #2563eb;        /* Royal Blue */
+            --accent-hover: #1d4ed8;        /* Darker Blue */
+            --background-light: #f8fafc;    /* Very light grey */
             --background-white: #ffffff;    /* Pure white */
-            --text-main: #1e293b;           /* Dark text for readability */
-            --text-light: #64748b;          /* Muted text for descriptions */
+            --text-main: #1e293b;           /* Dark text */
+            --text-light: #64748b;          /* Muted text */
             --border-color: #e2e8f0;        /* Light borders */
         }
 
@@ -26,6 +27,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -110,7 +115,7 @@
         .hero p {
             font-size: 1.25rem;
             color: var(--text-light);
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 40px auto;
         }
 
@@ -141,7 +146,7 @@
             color: white;
         }
 
-        /* --- 6. SKILLS SECTION --- */
+        /* --- 6. EDUCATION & EXPERIENCE --- */
         .section-title {
             text-align: center;
             font-size: 2rem;
@@ -149,6 +154,51 @@
             margin-bottom: 50px;
         }
 
+        .timeline-item {
+            background: var(--background-white);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .timeline-title h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+        }
+
+        .timeline-title h4 {
+            font-size: 1rem;
+            color: var(--accent-color);
+            margin-top: 5px;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .timeline-desc ul {
+            list-style: disc;
+            margin-left: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .timeline-desc li {
+            margin-bottom: 8px;
+        }
+
+        /* --- 7. SKILLS SECTION --- */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
@@ -164,25 +214,33 @@
             font-weight: 500;
             color: var(--secondary-color);
             box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: 0.3s;
         }
 
-        /* --- 7. PROJECTS SECTION --- */
+        .skill-tag:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* --- 8. PROJECTS SECTION --- */
         .projects {
             background-color: var(--background-white);
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
         .project-card {
-            background: white;
+            background: var(--background-light);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -193,6 +251,7 @@
 
         .project-content {
             padding: 25px;
+            flex-grow: 1;
         }
 
         .project-title {
@@ -202,37 +261,53 @@
             color: var(--primary-color);
         }
 
+        .project-tech {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
         .project-desc {
-            color: var(--text-light);
+            color: var(--secondary-color);
             font-size: 0.95rem;
             margin-bottom: 20px;
         }
 
-        .project-links a {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--accent-color);
-            margin-right: 15px;
+        .project-desc ul {
+            list-style: circle;
+            margin-left: 20px;
         }
 
-        /* --- 8. FOOTER --- */
+        /* --- 9. FOOTER --- */
         footer {
             background-color: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
         }
 
-        footer p {
-            color: #94a3b8;
-            font-size: 0.9rem;
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #cbd5e1;
+        }
+
+        .social-links a:hover {
+            color: white;
         }
 
         /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Simple hide for mobile for this demo */
+            .nav-links { display: none; } 
             .project-card { margin-bottom: 20px; }
+            .timeline-header { flex-direction: column; }
         }
     </style>
 </head>
@@ -241,10 +316,11 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">[Your Name]</div>
+                <div class="logo">Praneetha Voona</div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -254,11 +330,12 @@
 
     <section id="about" class="hero">
         <div class="container">
-            <h1>Hello, I'm [Your Name]</h1>
-            <p>A passionate [Your Job Title] specialized in building high-quality solutions. I solve complex problems with clean code and creative design.</p>
+            <h1>Hello, I'm Praneetha Voona</h1>
+            <p>Computer Science Student at The University of Tennessee, Knoxville.<br>
+            Passionate about Object-Oriented Programming, Algorithms, and Software Solutions.</p>
             <div>
-                <a href="#projects" class="btn">View My Work</a>
-                <a href="mailto:your.email@example.com" class="btn btn-outline">Contact Me</a>
+                <a href="#projects" class="btn">View My Projects</a>
+                <a href="mailto:praneethavoona@gmail.com" class="btn btn-outline">Contact Me</a>
             </div>
         </div>
     </section>
@@ -267,58 +344,115 @@
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
-                <span class="skill-tag">JavaScript</span>
                 <span class="skill-tag">Python</span>
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">Project Management</span>
-                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">React & JS</span>
+                <span class="skill-tag">OpenCV</span>
+                <span class="skill-tag">SQLite</span>
+                <span class="skill-tag">Tkinter</span>
+                <span class="skill-tag">Git / GitHub</span>
+                <span class="skill-tag">VS Code</span>
             </div>
+        </div>
+    </section>
+
+    <section id="experience" style="background-color: var(--background-white);">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div class="timeline-title">
+                        <h3>The University of Tennessee, Knoxville</h3>
+                        <h4>Bachelor of Science in Computer Science</h4>
+                    </div>
+                    <span class="timeline-date">Expected Graduation: May 2027</span>
+                </div>
+                <div class="timeline-desc">
+                    <p><strong>GPA:</strong> 3.39 | <strong>Honors:</strong> Dean's List (Spring 2025)</p>
+                    <p style="margin-top: 10px;"><strong>Award:</strong> Global Ambassador Scholarship (May 2023 - Present)</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div class="timeline-title">
+                        <h3>UT Student Assistant - International</h3>
+                        <h4>International Recruitment Office</h4>
+                    </div>
+                    <span class="timeline-date">Sep 2025 - Present</span>
+                </div>
+                <div class="timeline-desc">
+                    <ul>
+                        <li>Manage email communications and convert international grading systems to U.S. standards.</li>
+                        <li>Maintain and organize Excel spreadsheets for diverse datasets related to recruitment.</li>
+                        <li>Oversee university merchandise inventory for global partners.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div class="timeline-title">
+                        <h3>Learning Based Project Member</h3>
+                        <h4>Hack4Impact UTK</h4>
+                    </div>
+                    <span class="timeline-date">Sep 2025 - Present</span>
+                </div>
+                <div class="timeline-desc">
+                    <ul>
+                        <li>Develop web applications using React and JavaScript through hands-on learning.</li>
+                        <li>Collaborate with a team to design and implement software solutions for nonprofit organizations.</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Technical Projects</h2>
             <div class="projects-grid">
                 
                 <article class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">Project Name One</h3>
-                        <p class="project-desc">
-                            A brief description of what this project does. Mention the tech stack used (e.g., Built with React and Node.js). It solved X problem for Y user.
-                        </p>
-                        <div class="project-links">
-                            <a href="#">View Live Demo &rarr;</a>
-                            <a href="#">GitHub Repo &rarr;</a>
+                        <h3 class="project-title">UniPass: Face-Based MFA</h3>
+                        <div class="project-tech">Python, OpenCV, SQLite, Tkinter</div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Built a cross-platform application for secure student/admin login via facial recognition.</li>
+                                <li>Designed GUI workflows for viewing academic info and tuition status.</li>
+                                <li>Implemented CSV import/export and real-time face detection.</li>
+                            </ul>
                         </div>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">Project Name Two</h3>
-                        <p class="project-desc">
-                            Description of a second project. Focus on the results or the complexity of the data handling. Keep it to 2-3 sentences.
-                        </p>
-                        <div class="project-links">
-                            <a href="#">View Live Demo &rarr;</a>
-                            <a href="#">GitHub Repo &rarr;</a>
+                        <h3 class="project-title">Superball Analysis Tool</h3>
+                        <div class="project-tech">C++, Data Structures, Algorithms</div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Developed C++ programs using Disjoint Set (Union-Find) data structures to identify connected components.</li>
+                                <li>Implemented a greedy algorithm to recommend optimal moves based on board state evaluation.</li>
+                            </ul>
                         </div>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">Project Name Three</h3>
-                        <p class="project-desc">
-                            Description of a third project. This shows consistency and depth of experience.
-                        </p>
-                        <div class="project-links">
-                            <a href="#">View Live Demo &rarr;</a>
-                            <a href="#">GitHub Repo &rarr;</a>
+                        <h3 class="project-title">Luminous Lab</h3>
+                        <div class="project-tech">TinkerCAD, Circuit Simulation</div>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Designed and simulated electronic circuits to create a functional light sculpture.</li>
+                                <li>Collaborated on the physical design and assembly, ensuring stability and visual appeal.</li>
+                            </ul>
                         </div>
                     </div>
                 </article>
@@ -329,11 +463,17 @@
 
     <footer id="contact">
         <div class="container">
-            <h2>Let's work together</h2>
-            <p style="margin: 20px 0; color: #cbd5e1;">Currently open to new opportunities.</p>
-            <a href="mailto:your.email@example.com" class="btn">Get In Touch</a>
+            <h2>Let's Connect</h2>
+            <p style="margin: 20px 0; color: #cbd5e1;">I am currently looking for internship opportunities.</p>
+            <a href="mailto:praneethavoona@gmail.com" class="btn">Get In Touch</a>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com/in/praneetha-voona" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:praneethavoona@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+
             <div style="margin-top: 50px; border-top: 1px solid #334155; padding-top: 20px;">
-                <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+                <p>&copy; 2025 Praneetha Voona. All rights reserved.</p>
             </div>
         </div>
     </footer>
